@@ -16,7 +16,10 @@
     position: absolute;
     width: 160px;
     height: 160px;
-    background-color: #537D8D;
+    /* background-color: #537D8D;
+    background-color: #CE8D66; */
+    transition:color 2s linear;
+    transition:background 2s linear;
     border-radius: 50%;
 }
 
