@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class IntroductionComponent {
 
+  text = 'Kade Helseth - Full Stack Developer -';
+
+
 }

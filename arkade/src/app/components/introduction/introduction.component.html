@@ -1,1 +1,16 @@
-<section class="full-page"></section>
+<section class="full-page my-auto">
+    <div class="">
+        <div class="circle">
+            <div class="logo"></div>
+            <div class="text">
+                <p >
+                    <!-- <span class="rotation-text" *ngFor="let char of text.split(''); let i = index" 
+                        [ngStyle]="{'transform': rotate({{i*5}}deg) }"> -->
+                        <span class="rotation-text" *ngFor="let char of text.split(''); let i = index" [style.transform]="'rotate('+ (i*9.5) +'deg)'">
+                        {{char}} 
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
