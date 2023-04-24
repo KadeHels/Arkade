@@ -1,14 +1,14 @@
 <section class="full-page my-auto">
-    <div class="">
-        <div class="circle">
-            <div class="logo" [style.background]="logoColor"></div>
-            <div class="text">
-                <p>
-                    <span class="rotation-text" *ngFor="let char of text.split(''); let i = index" [style.transform]="'rotate('+ (i*9.5) +'deg)'">
-                        {{char}}
-                    </span>
-                </p>
-            </div>
-        </div>
+  <div class="">
+    <div class="circle">
+      <div class="logo" [style.background]="logoColor"></div>
+      <div class="text">
+        <p>
+          <span class="rotation-text" *ngFor="let char of text.split(''); let i = index" [style.transform]="'rotate('+ (i*9.5) +'deg)'">
+            {{char}}
+          </span>
+        </p>
+      </div>
     </div>
+  </div>
 </section>
