@@ -7,13 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { AboutComponent } from './components/about/about.component';
+import { BusinessComponent } from './components/business/business.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     IntroductionComponent,
-    AboutComponent
+    AboutComponent,
+    BusinessComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

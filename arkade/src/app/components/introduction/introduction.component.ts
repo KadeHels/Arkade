@@ -8,21 +8,21 @@ import { Component } from '@angular/core';
 export class IntroductionComponent {
 
   text = 'Kade Helseth - Full Stack Developer -';
-
   index = 0;
-  logoColor: any = 'red';
+  logoColor = 'white';
   logoColors = ['#537D8D', '#CE8D66', '#913212', '#1F2041', '#2D444D'];
 
   constructor() {
     this.logoColor = this.logoColors[0];
-
     this.loopLogoColors();
   }
 
   loopLogoColors() {
     setTimeout(() => {
       this.changeLogoColor();
-      this.loopLogoColors();
+      if (this.index < 90) { // exit loop after 15 minutes
+        this.loopLogoColors();
+      }
     }, 10000);
   }
 
