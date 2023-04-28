@@ -3,19 +3,28 @@
     - Contact-
   </h1>
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-auto">
-        <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id
-          est laborum.
-        </p>
+        <form [formGroup]="emailForm" autocomplete="off" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject:</label>
+            <input type="text" class="form-control" id="subject" formControlName="subject">
+            <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
+            <div *ngIf="emailForm.get('subject')?.invalid && emailForm.get('subject')?.touched" class="invalid-feedback">
+              Subject is required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="text"  class="form-label">Text:</label>
+            <textarea id="text" formControlName="text" class="form-control"></textarea>
+            
+            <div *ngIf="emailForm.get('text')?.invalid && emailForm.get('text')?.touched" class="invalid-feedback">
+              Text is required.
+            </div>
+            
+          </div>
+          <button class="btn btn btn-outline-secondary float-end" type="submit" [disabled]="emailForm.invalid">Send Email</button>
+        </form>
       </div>
     </div>
   </div>

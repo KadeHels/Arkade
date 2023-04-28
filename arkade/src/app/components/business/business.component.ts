@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class BusinessComponent {
 
+  public now: Date = new Date();
+
+    constructor() {
+        setInterval(() => {
+          this.now = new Date();
+        }, 1);
+    }
 }
