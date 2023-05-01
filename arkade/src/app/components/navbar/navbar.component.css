@@ -1,5 +1,7 @@
 .navbar {
     background: transparent;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 .divider {

@@ -7,13 +7,12 @@ body {
     margin: 0;
     /* font-family: Roboto, "Helvetica Neue", sans-serif; */
     font-family: 'Comfortaa', cursive;
-    background-color: goldenrod;
+    background-color: #E7ECE5;
 }
 
 .full-page {
     width: 100%;
     height: 100vh;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
