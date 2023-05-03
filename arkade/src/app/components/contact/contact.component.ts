@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -24,6 +24,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(): void {
-    window.open('mailto:<EMAILPLACEHOLDER>?subject=' + this.emailForm.get('subject')?.value +'&body=' + this.emailForm.get('text')?.value + '');
+    window.open(`mailto:${environment.email}?subject=` + this.emailForm.get('subject')?.value +'&body=' + this.emailForm.get('text')?.value + '');
   }
 }
